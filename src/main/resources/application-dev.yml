@@ -1,0 +1,21 @@
+
+server:
+  port: 8080
+ 
+spring:
+  datasource:
+    username: pushpm
+    password: pushpm
+    url: jdbc:oracle:thin:@localhost:1521:push
+    driver-class-name: oracle.jdbc.OracleDriver
+ 
+mybatis:
+  mapper-locations: classpath:mapping/*Mapping.xml
+  type-aliases-package: com.example.demo.entity
+ 
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
